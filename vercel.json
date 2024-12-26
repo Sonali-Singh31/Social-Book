@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "social_book/wsgi.py",
+      "use": "@vercel/python",
+      "config": { "maxLambdaSize": "20mb", "runtime": "python3.13" }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "social_book/wsgi.py"
+    }
+  ]
+}
